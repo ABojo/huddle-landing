@@ -1,0 +1,44 @@
+.benefits {
+  width: 90%;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  max-width: 77rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 7.5rem;
+    padding-right: 2.25rem;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    gap: 5rem;
+
+    & > *:nth-child(2) {
+      justify-self: end;
+    }
+  }
+
+  &__heading {
+    font-size: var(--fs-3);
+    font-family: var(--ff-heading);
+    color: var(--color-dark-cyan);
+    margin-bottom: 1rem;
+  }
+
+  &__paragraph {
+    line-height: var(--line-height-p);
+    color: var(--color-gray-blue);
+    font-size: var(--fs-4);
+  }
+
+  &__graphic {
+    width: 100%;
+    max-width: 25rem;
+  }
+}

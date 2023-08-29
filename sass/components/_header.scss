@@ -1,0 +1,78 @@
+.header {
+  background-color: var(--color-pale-cyan);
+  background-image: url("../images/bg-hero-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  padding-block: 3.5rem;
+
+  &__container {
+    max-width: 80rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5rem;
+  }
+
+  &__try-it {
+    background-color: var(--color-white);
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    color: var(--color-dark-cyan);
+    text-decoration: none;
+    font-size: var(--fs-5);
+    font-weight: var(--fw-body-2);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.65;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 13rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 4.5rem;
+  }
+
+  &__heading {
+    color: var(--color-dark-cyan);
+    font-size: var(--fs-1);
+    max-width: 30rem;
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    font-size: var(--fs-4);
+    color: var(--color-dark-cyan);
+    max-width: 32rem;
+    line-height: var(--line-height-p);
+    margin-bottom: 2.75rem;
+  }
+
+  &__cta {
+    font-size: var(--fs-5);
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    text-decoration: none;
+    font-weight: var(--fw-body-2);
+    padding: 1.25rem 4.25rem;
+    border-radius: 2rem;
+  }
+
+  &__graphic {
+    width: 100%;
+  }
+}

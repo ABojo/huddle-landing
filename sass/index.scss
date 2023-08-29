@@ -1,8 +1,11 @@
+@use "./components/header";
+
 :root {
   --color-pink: hsl(322, 100%, 66%);
   --color-pale-cyan: hsl(193, 100%, 96%);
   --color-dark-cyan: hsl(192, 100%, 9%);
   --color-gray-blue: hsl(208, 11%, 55%);
+  --color-white: #fff;
 
   --fs-1: 2.5rem;
   --fs-2: 2rem;

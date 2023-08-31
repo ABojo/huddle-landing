@@ -1,9 +1,15 @@
+@use "../abstracts/breakpoints" as *;
+
 .header {
   background-color: var(--color-pale-cyan);
   background-image: url("../images/bg-hero-desktop.svg");
   background-position: center;
   background-size: cover;
   padding-block: 3.5rem;
+
+  @media (max-width: $bp-4) {
+    background-image: url("../images/bg-hero-mobile.svg");
+  }
 
   &__container {
     max-width: 80rem;
@@ -16,6 +22,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3.5rem;
+
+    @media (max-width: $bp-3) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__try-it {
@@ -32,11 +42,19 @@
     &:hover {
       opacity: 0.65;
     }
+
+    @media (max-width: $bp-4) {
+      padding: 0.5rem 2rem;
+    }
   }
 
   &__logo {
     img {
       width: 13rem;
+
+      @media (max-width: $bp-4) {
+        width: 9rem;
+      }
     }
   }
 
@@ -45,6 +63,16 @@
     grid-template-columns: max-content 1fr;
     align-items: center;
     gap: 4.5rem;
+
+    @media (max-width: $bp-2) {
+      gap: 1rem;
+    }
+
+    @media (max-width: $bp-3) {
+      grid-template-columns: 1fr;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__heading {
@@ -52,6 +80,14 @@
     font-size: var(--fs-1);
     max-width: 30rem;
     margin-bottom: 2rem;
+
+    @media (max-width: $bp-2) {
+      max-width: 25rem;
+    }
+
+    @media (max-width: $bp-3) {
+      margin-inline: auto;
+    }
   }
 
   &__paragraph {
@@ -60,6 +96,14 @@
     max-width: 32rem;
     line-height: var(--line-height-p);
     margin-bottom: 2.75rem;
+
+    @media (max-width: $bp-2) {
+      max-width: 27rem;
+    }
+
+    @media (max-width: $bp-3) {
+      margin-inline: auto;
+    }
   }
 
   &__cta {
@@ -76,9 +120,19 @@
     &:hover {
       opacity: 0.75;
     }
+
+    @media (max-width: $bp-4) {
+      padding: 1rem 3rem;
+    }
   }
 
   &__graphic {
     width: 100%;
+
+    @media (max-width: $bp-3) {
+      margin-top: 5rem;
+      max-width: 30rem;
+      margin-inline: auto;
+    }
   }
 }

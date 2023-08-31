@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints" as *;
+
 .footer {
   background-color: var(--color-dark-cyan);
   padding-block: 15rem;
@@ -16,6 +18,20 @@
       "logo . ."
       "details nav socials"
       ". . copyright";
+
+    @media (max-width: $bp-1) {
+      grid-template-columns: 20rem 1fr;
+      grid-template-areas:
+        "logo ."
+        "details nav"
+        "socials copyright";
+    }
+
+    @media (max-width: $bp-4) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "details" "nav" "socials" "copyright";
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -29,7 +45,6 @@
     display: flex;
     list-style-type: none;
     flex-direction: column;
-
     gap: 1rem;
 
     li {
@@ -52,6 +67,10 @@
     grid-area: nav;
     justify-self: end;
 
+    @media (max-width: $bp-4) {
+      justify-self: start;
+    }
+
     ul {
       list-style-type: none;
       display: grid;
@@ -59,11 +78,23 @@
       gap: 1.25rem;
       column-gap: 6rem;
 
+      @media (max-width: $bp-1) {
+        column-gap: 3rem;
+      }
+
+      @media (max-width: $bp-4) {
+        grid-template-columns: 1fr;
+      }
+
       li a {
         font-size: var(--fs-4);
         color: var(--color-white);
         text-decoration: none;
         font-weight: var(--fw-body-1);
+
+        @media (max-width: $bp-1) {
+          font-size: var(--fs-5);
+        }
       }
     }
   }
@@ -74,6 +105,14 @@
     justify-self: center;
     display: flex;
     gap: 1rem;
+
+    @media (max-width: $bp-1) {
+      justify-self: start;
+    }
+
+    @media (max-width: $bp-4) {
+      justify-self: center;
+    }
 
     li a {
       border: 2px solid var(--color-white);
@@ -99,5 +138,9 @@
     grid-area: copyright;
     color: var(--color-white);
     justify-self: end;
+
+    @media (max-width: $bp-4) {
+      justify-self: center;
+    }
   }
 }

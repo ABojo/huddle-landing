@@ -2,6 +2,7 @@
 @use "./components/benefits";
 @use "./components/build";
 @use "./components/footer";
+@use "./abstracts/breakpoints" as *;
 
 :root {
   --color-pink: hsl(322, 100%, 66%);
@@ -24,6 +25,17 @@
   --fw-heading: 600;
   --fw-body-1: 400;
   --fw-body-2: 700;
+
+  @media (max-width: $bp-2) {
+    --fs-1: 2rem;
+    --fs-2: 1.75rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1rem;
+  }
+
+  @media (max-width: $bp-5) {
+    --fs-4: 0.9rem;
+  }
 }
 
 *,
